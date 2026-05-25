@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Sareads - Home</title>
+</head>
+<body>
+    <main>
+        <!--Navbar with hamburger menu to toggle on screens below 900px-->
+        <nav class="navbar">
+            <img src="images/logo.png" height="100">
+            <input type="checkbox" id="toggle-menu">
+            <label for="toggle-menu" class="hamburger">&#9776;</label>
+            <ul>
+                <li><a href="/index.html" title="Home page">Home</a></li>
+                <li class="hideable">|</li>
+                <li><a href="/About.html" title="About us page">About us</a></li>
+                <li class="hideable">|</li>
+                <li><a href="/Contact.html" title="Contact us page">Contact us</a></li>
+            </ul>
+        </nav>
+
+        <!--Hero image with text to stylise the website-->
+        <div class="hero-image" alt="banner">
+            <div class="hero-text">
+            <h1>Let Your Mind Wander..</h1>
+        </div>
+        </div>
+
+
+
+<!--stock content divider-->
+<div class="stock">
+    <h2>Our Stock...</h2>
+    <p>Find something you Enjoy!</p>
+</div>
+
+
+
+<!--Books. Displayed via JS-->
+
+
+<div class="container" id="container">
+<!--books displayed in here-->
+</div>
+
+
+
+
+
+<!--Cart button-->
+
+
+<div class="cart-btn" id="cart-btn" onclick="window.location.href='pay.html'">
+    🛒 Cart <span id="cart-count">0</span>
+</div>
+
+</main>
+<script src="js/book.js"></script>
+</body>
+</html>
+

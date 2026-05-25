@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Sareads - Cart and Payment</title>
+</head>
+<body>
+    <main>
+        <!--Navbar with hamburger menu to toggle on screens below 900px-->
+        <nav class="navbar">
+            <img src="images/logo.png" height="100">
+            <input type="checkbox" id="toggle-menu">
+            <label for="toggle-menu" class="hamburger">&#9776;</label>
+            <ul>
+                <li><a href="/index.html" title="Home page">Home</a></li>
+                <li class="hideable">|</li>
+                <li><a href="/About.html" title="About us page">About us</a></li>
+                <li class="hideable">|</li>
+                <li><a href="/Contact.html" title="Contact us page">Contact us</a></li>
+            </ul>
+        </nav>
+
+        <!--Hero image with text to stylise the website-->
+        <div class="hero-image" alt="banner">
+            <div class="hero-text">
+            <h1>Let Your Mind Wander..</h1>
+        </div>
+        </div>
+
+
+        <div class="pay-wrapper">
+
+            <!-- Order summary pulled from sessionStorage -->
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <ul id="cart-items-list"></ul>
+                <p>Total: <strong><span id="order-total">£0.00</span></strong></p>
+                <button class="clear" id="clear">Clear Cart</button>
+            </div>
+
+            <!-- Card details form -->
+            <div class="card-form">
+                <h2>Payment Details</h2>
+
+                <p id="error-msg" class="error-msg"></p>
+
+                <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" placeholder="16 digit card number" maxlength="16">
+                </div>
+
+                <div class="form-group">
+                    <label>Expiration Date</label>
+                    <div class="expiry">
+                        <select id="exp-month">
+                            <option value="">Month</option>
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">06</option>
+                            <option value="7">07</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <select id="exp-year">
+                            <option value="">Year</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cvv">Security Code (CVV)</label>
+                    <input type="text" id="cvv" placeholder="3 or 4 digits" maxlength="4">
+                </div>
+
+                <button id="continue-btn" class="pay-btn">Continue</button>
+            </div>
+
+        </div>
+    </main>
+    <script src="js/pay.js"></script>
+</body>
+</html>

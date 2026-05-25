@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Sareads - Successful Payment</title>
+</head>
+<body>
+    <main>
+        <!--Navbar with hamburger menu to toggle on screens below 900px-->
+        <nav class="navbar">
+            <img src="images/logo.png" height="100">
+            <input type="checkbox" id="toggle-menu">
+            <label for="toggle-menu" class="hamburger">&#9776;</label>
+            <ul>
+                <li><a href="/index.html" title="Home page">Home</a></li>
+                <li class="hideable">|</li>
+                <li><a href="/About.html" title="About us page">About us</a></li>
+                <li class="hideable">|</li>
+                <li><a href="/Contact.html" title="Contact us page">Contact us</a></li>
+            </ul>
+        </nav>
+
+        <!--Hero image with text to stylise the website-->
+        <div class="hero-image" alt="banner">
+            <div class="hero-text">
+            <h1>Let Your Mind Wander..</h1>
+        </div>
+        </div>
+
+
+<!--Success message that has payment card appear masked and only shows its last four digits using success.js-->
+<div class="success-box">
+    <h1>Payment Successful!</h1>
+</div>
+
+    </main>
+    <script src="js/success.js"></script>
+    </body>
+    </html>

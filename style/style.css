@@ -1,0 +1,407 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    min-height: 100vh;
+    background-color: #CDC7D1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+
+}
+
+
+main {
+    padding-top: 0;
+}
+
+.navbar {
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+}
+
+
+
+
+.navbar ul {
+    display: flex;
+    font-size: 1.5rem;
+    gap: 50px;
+    position: relative;
+    list-style: none;
+}
+
+.navbar li a {
+    display: flex;
+    align-items: center;
+    color: #273318;
+    list-style: none;
+    font-size: 1.9rem;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    color: gray;
+}
+
+.hideable {
+    color: #273318;
+    font-size: 1.9rem;
+}
+
+.hamburger {
+    display: none;
+    font-size: 40px;
+    color: #273318;
+    padding: 10px;
+    cursor: pointer; 
+}
+
+label:hover {
+    color: gray;
+}
+
+
+
+
+
+#toggle-menu {
+    display: none;
+}
+
+#toggle-menu:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    top: 0;
+    background-color: #D9D9D9;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+
+
+
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner.jpg");
+
+  /* Set a specific height */
+  height: 50vh;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 0;
+}
+
+/* Place text in the left of the image */
+.hero-text {
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text h1 {
+    font-weight: 300;
+    font-size: 3rem; /* adjust size too if you want */
+}
+
+
+.stock {
+    background-color: #D9D9D9;
+    text-align: center;
+    margin-top: 0;
+    overflow: hidden; /* contains any bleeding margins */
+}
+
+.stock h2 {
+    color: #273318;
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 60px;
+}
+
+.card {
+    background-color: #D9D9D9;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.card img {
+    width: 160px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 8px;
+}
+
+.card h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.6rem;
+    color: #273318;
+}
+
+.card p {
+    flex: 1;
+    font-size: 1.05rem;
+    margin: 0;
+    color: #273318;
+    line-height: 1.5;
+}
+
+.card h3 {
+    margin: 12px 0;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #273318;
+}
+
+.pay-btn {
+    background-color: #273318;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-end; /* pushes button to the right */
+}
+
+.pay-btn:hover {
+    background-color: #3d4f28;
+}
+
+
+.cart-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #273318;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 100;
+}
+
+.cart-btn:hover {
+    background-color: gray;
+}
+
+#cart-count {
+    background-color: white;
+    color: #273318;
+    border-radius: 50%;
+    padding: 2px 8px;
+    font-weight: 400;
+    margin-left: 6px;
+}
+
+
+
+.pay-wrapper {
+    display: flex;
+    gap: 40px;
+    padding: 160px 40px 40px 40px;
+    flex-wrap: wrap;
+}
+
+.cart-summary {
+    background-color: #D9D9D9;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.cart-summary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.cart-summary li {
+    padding: 6px 0;
+    border-bottom: 1px solid #bbb;
+}
+
+.card-form {
+    background-color: #D9D9D9;
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group input, .form-group select {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: "Lato", sans-serif;
+}
+
+.expiry {
+    display: flex;
+    gap: 10px;
+}
+
+.expiry select {
+    flex: 1;
+}
+
+.error-msg {
+    color: red;
+    font-size: 0.9rem;
+    min-height: 20px;
+}
+
+
+.clear {
+    background-color: #FFCCCB;
+    color: #8b0000;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.clear:hover {
+    background-color: #ffb3b3;
+}
+
+
+
+@media (max-width: 1185px) {
+    .navbar ul {
+        font-size: 14px;
+    }
+
+    .navbar img {
+        height: 55px;
+    }
+
+    #landing-container img {
+        position: relative;
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        font-size: 1.5rem;
+        position: absolute;
+        margin-right: 40px;
+    }
+
+    .hero-text {
+        left: 40%;
+    }
+
+    .hideable {
+        display: none !important;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar img {
+        height: 70px;
+    }
+
+    .navbar {
+        gap: 20px;
+    }
+
+
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+        padding: 30px;
+        gap: 20px;
+    }
+    .card img {
+        width: 120px;
+        height: 160px;
+    }
+    .card h2 {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .pay-wrapper {
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
